@@ -9,7 +9,7 @@ ai_bot = ChatBot()  # Create a global instance of ChatBot
 @app.route('/teacher')
 def answer_question():
 	headers = request.headers
-	content_type = headers.get('Content-Type')
+	# content_type = headers.get('Content-Type')
 
 	args = request.args
 	prompt = args.get('prompt')
