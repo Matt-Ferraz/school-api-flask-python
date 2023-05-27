@@ -1,9 +1,7 @@
 import json
-import openai
 from flask import Flask, request
 from controllers.chatbot import ChatBot
 
-openai.api_key = "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"
 app = Flask(__name__)
 
 ai_bot = ChatBot()  # Create a global instance of ChatBot

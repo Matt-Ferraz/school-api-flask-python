@@ -21,4 +21,4 @@ ENV FLASK_RUN_HOST=0.0.0.0
 EXPOSE 8800
 
 # Run the command to start the Flask app
-CMD ["gunicorn", "server:app", "--bind", "0.0.0.0:8800"]
+CMD ["sh", "entrypoint.sh"]
