@@ -6,10 +6,17 @@ app = Flask(__name__)
 
 ai_bot = ChatBot()  # Create a global instance of ChatBot
 
-@app.route('/teacher')
+
+@app.route('/')
+# @app.get
+def test():
+	return 'Hello, world'
+
+
+@app.route('/teacher', )
 def answer_question():
 	headers = request.headers
-	# content_type = headers.get('Content-Type')
+	content_type = headers.get('Content-Type')
 
 	args = request.args
 	prompt = args.get('prompt')
@@ -18,4 +25,4 @@ def answer_question():
 	return ai_bot.send_message(array_data)
 
 if __name__ == '__main__':
-	app.run(port=8800)
+	app.run(debug=True)
